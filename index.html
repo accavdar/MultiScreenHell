@@ -64,7 +64,7 @@
 
     <section>
         <h1>Fragmentation</h1>
-        <img src="img/manufacturars.png"/>
+        <img src="img/manufacturers.png"/>
     </section>
 
     <section>
@@ -140,6 +140,12 @@
         </p>
     </section>
 
+    <section>
+        <h1>Orientation</h1>
+
+        <h2>Landscape or Portrait?</h2>
+    </section>
+
     <section data-background="img/didier.png">
         <h2 class="drogba">Keep Calm</h2>
 
@@ -151,11 +157,211 @@
 </section>
 
 <section>
-    <section>
-        <h1>Supporting</h1>
+<section>
+    <h1>Supporting</h1>
 
-        <h1>Multiple Screens</h1>
-    </section>
+    <h1>Multiple Screens</h1>
+</section>
+
+<section>
+    <h2>Range of Screens Supported</h2>
+    <ul>
+        <li class="fragment roll-in"><span class="focus">sizes:</span> small, normal, large, and xlarge</li>
+        <li class="fragment roll-in"><span class="focus">densities:</span> ldpi (low), mdpi (medium), hdpi (high),
+            and xhdpi (extra high)
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Size and Density Group</h2>
+    <img src="img/screens_ranges.png"/>
+</section>
+
+<section>
+    <h2>Density-independent Pixel (dp)</h2>
+
+    <p class="fragment roll-in">
+        A <span class="focus">virtual pixel unit</span> that you should use when defining UI layout, to express
+        layout dimensions or position in a <span class="focus">density-independent</span> way.
+    </p>
+
+    <p class="fragment roll-in">
+        The <span class="focus">density-independent pixel</span> is equivalent to <span
+            class="focus">one physical pixel</span>
+        on a <span class="focus">160 dpi</span> screen (medium density)
+    </p>
+</section>
+
+<section>
+    <h2>Conversion</h2>
+
+    <h3><span class="focus">px = dp * (dpi / 160)</span></h3>
+    <h4>Ex: on a 240 dpi screen, 1 dp equals 1.5 physical pixels</h4>
+</section>
+
+<section>
+    <h2>Density Independence</h2>
+
+    <p class="fragment roll-in">
+        It <span class="focus">preserves</span> the <span class="focus">physical size</span> of user interface
+        elements when displayed on screens with <span class="focus">different densities</span>
+    </p>
+
+    <ul>
+        <li class="fragment roll-in">The system scales <span class="focus">dp units</span> as appropriate for the
+            current screen density
+        </li>
+        <li class="fragment roll-in">The system <span class="focus">scales drawable resources</span> to the
+            appropriate size, based on the
+            current screen density, if necessary
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2><span class="alert">Bad</span></h2>
+    <img src="img/density_bad.png"/>
+
+    <h2><span class="success">Good</span></h2>
+    <img src="img/density_good.png"/>
+</section>
+
+<section>
+    <h2>How to Support Multiple Screens?</h2>
+</section>
+
+<section>
+    <h2>Use <span class="focus">&lt;supports-screen&gt;</span>
+    </h2>
+
+    <p>Explicitly declare in the manifest which screen sizes your application supports </p>
+    <img src="img/supports_screen.png"/>
+</section>
+
+<section>
+    <h2>Provide different layouts for different screen sizes</h2>
+    <ul>
+        <li class="fragment roll-in">
+            Provide size-specific resources: <span class="focus">small</span>, <span class="focus">normal</span>,
+            <span class="focus">large</span>, and <span class="focus">xlarge</span>
+            <ul>
+                <li>Ex: <span class="focus">layout-xlarge/</span></li>
+            </ul>
+        </li>
+        <li class="fragment roll-in">Use the <span class="focus">sw&lt;N&gt;dp</span> configuration qualifier to
+            define the smallest available
+            width (beginning API 13)
+            <ul>
+                <li>Ex: <span class="focus">layout-sw600dp/</span> (at least 600dp screen width)</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Provide different bitmaps</h2>
+    <ul>
+        <li class="fragment roll-in">
+            By default, Android scales drawables (<span class="focus">.png</span>, <span class="focus">.jpg</span>,
+            <span class="focus">.gif</span> and <span class="focus">.9.png</span> files)
+        </li>
+
+        <li class="fragment roll-in">Include <span class="focus">alternative versions</span>
+            at <span class="focus">different resolutions</span> for <span
+                    class="focus">different screen densities</span>
+        </li>
+        <li class="fragment roll-in">
+            Density-specific resources are <span class="focus">ldpi</span> (low), <span class="focus">mdpi</span>
+            (medium), <span class="focus">hdpi</span> (high), and <span class="focus">xhdpi</span> (extra high)
+            <ul>
+                <li>Ex: <span class="focus">drawable-hdpi/</span></li>
+            </ul>
+
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Configuration Qualifiers</h2>
+
+    <h3>Usage: <span class="focus">&lt;resources_name&gt;-&lt;qualifier&gt;</span></h3>
+    <ul>
+        <li class="fragment roll-in">
+            <span class="focus">&lt;resources_name&gt;</span> is the standard resource name (such as <span
+                class="focus">drawable</span> or <span class="focus">layout</span>)
+        </li>
+
+        <li class="fragment roll-in">
+            <span class="focus">&lt;qualifier&gt;</span> is a configuration qualifier (such as <span
+                class="focus">hdpi</span>
+            or <span class="focus">xlarge</span>)
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Layouts & Drawables</h2>
+    <img src="img/cq.png"/>
+</section>
+
+<section>
+    <h2>Alternative Drawables</h2>
+    <ul>
+        <li class="fragment roll-in">
+            You only need to provide density-specific drawables (<span class="focus">.png</span>, <span
+                class="focus">.jpg</span>, <span class="focus">.gif</span> or <span class="focus">.9.png</span>)
+        </li>
+
+        <li class="fragment roll-in">
+            Follow the <span class="focus">3:4:6:8</span> scaling ratio between the four generalized densities
+            <ul>
+                <li>36x36 for low-density</li>
+                <li>48x48 for medium-density</li>
+                <li>72x72 for high-density</li>
+                <li>96x96 for extra high-density</li>
+            </ul>
+        </li>
+        <li class="fragment roll-in">See <a
+                href="http://developer.android.com/guide/practices/ui_guidelines/icon_design.html">Icon Design
+            Guideline</a>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Relative Sizes</h2>
+    <img src="img/screens_densities.png"/>
+</section>
+
+<section>
+    <h2>Tablet Layouts for Android 3.2</h2>
+</section>
+
+<section>
+    <h1>Best Practises</h1>
+</section>
+
+<section>
+    <h2>1. Use wrap_content, fill_parent, or the dp unit for layout dimensions</h2>
+</section>
+
+<section>
+    <h2>2. Do not use hard-coded pixel values in your application code</h2>
+</section>
+
+<section>
+    <h2>3. Use RelativeLayout</h2>
+</section>
+
+<section>
+    <h2>4. Use size and density-specific resources</h2>
+</section>
+
+<section>
+    <h2>5. Use Nine-patch Bitmaps</h2>
+</section>
+
 </section>
 
 <section>
@@ -165,6 +371,37 @@
         <h1>&</h1>
 
         <h1>Handsets</h1>
+    </section>
+
+    <section>
+        <h1>Basic Guideline</h1>
+    </section>
+
+    <section>
+        <h2>Build your activity designs based on fragments</h2>
+    </section>
+
+    <section>
+        <h2>Use the action bar</h2>
+    </section>
+
+    <section>
+        <h2>Implement flexible layouts</h2>
+    </section>
+
+    <section>
+        <h2>Creating Single-pane and Multi-pane Layouts</h2>
+    </section>
+
+    <section>
+        <h2>Using Action Bar</h2>
+    </section>
+
+</section>
+
+<section>
+    <section>
+        <h1>Testing</h1>
     </section>
 </section>
 
