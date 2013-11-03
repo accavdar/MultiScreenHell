@@ -605,20 +605,20 @@
         <h3><span class="focus">&lt;uses-feature&gt;</span> in manifest file</h3>
                 <pre>
                     <code class="xml" contenteditable="false" data-trim>
-                        &lt;uses-feature android:name="android.hardware.bluetooth" /&gt;
-                        &lt;uses-feature android:name="android.hardware.camera" /&gt;
+&lt;uses-feature android:name="android.hardware.bluetooth" /&gt;
+&lt;uses-feature android:name="android.hardware.camera" /&gt;
                     </code>
                 </pre>
 
-        <p class="fragment roll-in">
+        <p>
             The other <span class="focus">filters</span> for apps availability in Google Play:
-        <ul>
-            <li class="fragment roll-in">&lt;supports-gl-texture&gt;</li>
-            <li class="fragment roll-in">&lt;uses-configuration&gt;</li>
-            <li class="fragment roll-in">&lt;uses-library&gt;</li>
-            <li class="fragment roll-in">&lt;uses-permission&gt;</li>
-            <li class="fragment roll-in">&lt;uses-sdk&gt;</li>
-        </ul>
+            <ul>
+                <li>&lt;supports-gl-texture&gt;</li>
+                <li>&lt;uses-configuration&gt;</li>
+                <li>&lt;uses-library&gt;</li>
+                <li>&lt;uses-permission&gt;</li>
+                <li>&lt;uses-sdk&gt;</li>
+            </ul>
         </p>
     </section>
 
@@ -628,12 +628,12 @@
         <h3>Check feature availabilities at runtime</h3>
                 <pre>
                     <code class="java" contenteditable="false" data-trim>
-                        PackageManager packageManager = this.getPackageManager();
-                        if (packageManager.hasSystemFeature(PackageManager.FEATURE_NFC)) {
-                        Log.d(TAG, "Oh yeah, NFC is available. :)");
-                        } else {
-                        Log.d(TAG, "Shit, no NFC. :(");
-                        }
+PackageManager packageManager = this.getPackageManager();
+if (packageManager.hasSystemFeature(PackageManager.FEATURE_NFC)) {
+    Log.d(TAG, "Oh yeah, NFC is available. :)");
+} else {
+    Log.d(TAG, "Shit, no NFC. :(");
+}
                     </code>
                 </pre>
     </section>
@@ -641,8 +641,8 @@
     <section>
         <h1>Business Reasons</h1>
         <ul>
-            <li class="fragment roll-in">List the countries an app is available in</li>
-            <li class="fragment roll-in">Select which carrier’s users are able to access the app</li>
+            <li>List the countries an app is available in</li>
+            <li>Select which carrier’s users are able to access the app</li>
         </ul>
     </section>
 </section>
