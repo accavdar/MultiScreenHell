@@ -51,14 +51,14 @@
     <section>
         <h1>Manufacturers</h1>
         <ul>
-            <li class="fragment roll-in">Acer</li>
-            <li class="fragment roll-in">Asus</li>
-            <li class="fragment roll-in">HTC</li>
-            <li class="fragment roll-in">LG</li>
-            <li class="fragment roll-in">Motorola</li>
-            <li class="fragment roll-in">Samsung</li>
-            <li class="fragment roll-in">Sony</li>
-            <li class="fragment roll-in">...</li>
+            <li>Acer</li>
+            <li>Asus</li>
+            <li>HTC</li>
+            <li>LG</li>
+            <li>Motorola</li>
+            <li>Samsung</li>
+            <li>Sony</li>
+            <li>...</li>
         </ul>
     </section>
 
@@ -111,7 +111,7 @@
     <section>
         <h1>Everywhere</h1>
 
-        <h2>Internet of Things?</h2>
+        <h2>Internet of Things (IoT)?</h2>
         <img src="img/iot.jpg"/>
 
         <p>
@@ -166,8 +166,8 @@
 <section>
     <h2>Range of Screens Supported</h2>
     <ul>
-        <li class="fragment roll-in"><span class="focus">sizes:</span> small, normal, large, and xlarge</li>
-        <li class="fragment roll-in"><span class="focus">densities:</span> ldpi (low), mdpi (medium), hdpi (high),
+        <li><span class="focus">sizes:</span> small, normal, large, and xlarge</li>
+        <li><span class="focus">densities:</span> ldpi (low), mdpi (medium), hdpi (high),
             and xhdpi (extra high)
         </li>
     </ul>
@@ -181,12 +181,12 @@
 <section>
     <h2>Density-independent Pixel (dp)</h2>
 
-    <p class="fragment roll-in">
+    <p>
         A <span class="focus">virtual pixel unit</span> that you should use when defining UI layout, to express
         layout dimensions or position in a <span class="focus">density-independent</span> way.
     </p>
 
-    <p class="fragment roll-in">
+    <p>
         The <span class="focus">density-independent pixel</span> is equivalent to <span
             class="focus">one physical pixel</span>
         on a <span class="focus">160 dpi</span> screen (medium density)
@@ -203,16 +203,16 @@
 <section>
     <h2>Density Independence</h2>
 
-    <p class="fragment roll-in">
+    <p>
         It <span class="focus">preserves</span> the <span class="focus">physical size</span> of user interface
         elements when displayed on screens with <span class="focus">different densities</span>
     </p>
 
     <ul>
-        <li class="fragment roll-in">The system scales <span class="focus">dp units</span> as appropriate for the
+        <li>The system scales <span class="focus">dp units</span> as appropriate for the
             current screen density
         </li>
-        <li class="fragment roll-in">The system <span class="focus">scales drawable resources</span> to the
+        <li>The system <span class="focus">scales drawable resources</span> to the
             appropriate size, based on the
             current screen density, if necessary
         </li>
@@ -242,14 +242,14 @@
 <section>
     <h2>Provide different layouts for different screen sizes</h2>
     <ul>
-        <li class="fragment roll-in">
+        <li>
             Provide size-specific resources: <span class="focus">small</span>, <span class="focus">normal</span>,
             <span class="focus">large</span>, and <span class="focus">xlarge</span>
             <ul>
                 <li>Ex: <span class="focus">layout-xlarge/</span></li>
             </ul>
         </li>
-        <li class="fragment roll-in">Use the <span class="focus">sw&lt;N&gt;dp</span> configuration qualifier to
+        <li>Use the <span class="focus">sw&lt;N&gt;dp</span> configuration qualifier to
             define the smallest available
             width (beginning API 13)
             <ul>
@@ -262,16 +262,16 @@
 <section>
     <h2>Provide different bitmaps</h2>
     <ul>
-        <li class="fragment roll-in">
+        <li>
             By default, Android scales drawables (<span class="focus">.png</span>, <span class="focus">.jpg</span>,
             <span class="focus">.gif</span> and <span class="focus">.9.png</span> files)
         </li>
 
-        <li class="fragment roll-in">Include <span class="focus">alternative versions</span>
+        <li>Include <span class="focus">alternative versions</span>
             at <span class="focus">different resolutions</span> for <span
                     class="focus">different screen densities</span>
         </li>
-        <li class="fragment roll-in">
+        <li>
             Density-specific resources are <span class="focus">ldpi</span> (low), <span class="focus">mdpi</span>
             (medium), <span class="focus">hdpi</span> (high), and <span class="focus">xhdpi</span> (extra high)
             <ul>
@@ -287,12 +287,12 @@
 
     <h3>Usage: <span class="focus">&lt;resources_name&gt;-&lt;qualifier&gt;</span></h3>
     <ul>
-        <li class="fragment roll-in">
+        <li>
             <span class="focus">&lt;resources_name&gt;</span> is the standard resource name (such as <span
                 class="focus">drawable</span> or <span class="focus">layout</span>)
         </li>
 
-        <li class="fragment roll-in">
+        <li>
             <span class="focus">&lt;qualifier&gt;</span> is a configuration qualifier (such as <span
                 class="focus">hdpi</span>
             or <span class="focus">xlarge</span>)
@@ -308,12 +308,12 @@
 <section>
     <h2>Alternative Drawables</h2>
     <ul>
-        <li class="fragment roll-in">
+        <li>
             You only need to provide density-specific drawables (<span class="focus">.png</span>, <span
                 class="focus">.jpg</span>, <span class="focus">.gif</span> or <span class="focus">.9.png</span>)
         </li>
 
-        <li class="fragment roll-in">
+        <li>
             Follow the <span class="focus">3:4:6:8</span> scaling ratio between the four generalized densities
             <ul>
                 <li>36x36 for low-density</li>
@@ -322,7 +322,7 @@
                 <li>96x96 for extra high-density</li>
             </ul>
         </li>
-        <li class="fragment roll-in">See <a
+        <li>See <a
                 href="http://developer.android.com/guide/practices/ui_guidelines/icon_design.html">Icon Design
             Guideline</a>
         </li>
@@ -344,18 +344,18 @@
 <section>
     <h2>New Size Qualifiers</h2>
     <ul>
-        <li class="fragment roll-in">
+        <li>
             smallestWidth: <span class="focus">sw&lt;N&gt;dp</span>
             <ul>
                 <li>Ex: <span class="focus">sw600dp</span></li>
             </ul>
         </li>
-        <li class="fragment roll-in">Available screen width: <span class="focus">w&lt;N&gt;dp</span>
+        <li>Available screen width: <span class="focus">w&lt;N&gt;dp</span>
             <ul>
                 <li>Ex: <span class="focus">w1024dp</span></li>
             </ul>
         </li>
-        <li class="fragment roll-in">Available screen height: <span class="focus">h&lt;N&gt;dp</span>
+        <li>Available screen height: <span class="focus">h&lt;N&gt;dp</span>
             <ul>
                 <li>Ex: <span class="focus">h720dp</span></li>
             </ul>
@@ -379,6 +379,8 @@
 
     <p>Using <span class="focus">wrap_content</span>, <span class="focus">match_parent</span> or <span class="focus">dp units</span>
         guarantees that the view is given an appropriate size on the current device screen</p>
+
+    <p>PS: Use <span class="focus">sp</span> for font sizes</p>
 </section>
 
 <section>
@@ -426,31 +428,166 @@
     </section>
 
     <section>
-        <h2>Build your activity designs based on fragments</h2>
+        <h2>1. Build your activity designs based on <span class="focus">Fragments</span></h2>
     </section>
 
     <section>
-        <h2>Use the action bar</h2>
+        <h1>Fragment</h1>
+        <ul>
+            <li>Introduced in Android 3.0 (API Level 11)</li>
+            <li>It allows you to separate distinct behavioral components of your UI into
+                separate parts
+            </li>
+            <li>Provides <span class="focus">modular</span> UI development</li>
+            <li>PS: Use Android <a
+                    href="http://developer.android.com/tools/support-library/index.html">Support Libraries</a> to use
+                fragments in older Android versions
+            </li>
+        </ul>
     </section>
 
     <section>
-        <h2>Implement flexible layouts</h2>
+        <h2>Multiple Fragments, Multiple Activities</h2>
+        <img src="img/fragments.png"/>
     </section>
 
     <section>
-        <h2>Creating Single-pane and Multi-pane Layouts</h2>
+        <h2>Handsets</h2>
+
+        <p><span class="focus">res/layout/main.xml</span></p>
+        <img src="img/handset.png"/>
     </section>
 
     <section>
-        <h2>Using Action Bar</h2>
+        <h2>Tablets</h2>
+
+        <p><span class="focus">res/layout-large/main.xml</span></p>
+        <img src="img/tablet.png"/>
+
+        <p>PS: You should also use the new <span class="focus">minimum width</span> size qualifiers in order to more
+            precisely control the screen size</p>
     </section>
 
+    <section>
+        <h2>How is it work?</h2>
+        <ul>
+            <li>If Fragment B is in the layout, Activity A notifies Fragment B to update
+                itself
+            </li>
+            <li>If Fragment B is not in the layout, Activity A starts Activity B (which hosts
+                Fragment B)
+            </li>
+            <li>Important Note: <span class="focus">Define a callback interface in each fragment class</span>
+                to communicate with host activity
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. Use the <span class="focus">Action Bar</span></h2>
+
+        <p>The action bar is a window feature that <span class="focus">Action Bar</span>identifies the user
+            location</span>, and <span class="focus">Action Bar</span>provides user actions</span> and
+            <span class="focus">Action Bar</span>navigation modes</span></p>
+        <img src="img/actionbar.png"/>
+
+        <p>Introduced in Android 3.0 (API Level 11). However, you can use t using Android <a
+                href="http://developer.android.com/tools/support-library/index.html">Support Libraries</a></p>
+    </section>
+
+    <section>
+        <h2>Why Action Bar?</h2>
+
+        <p>Android system does all the work to <span class="focus">gracefully adapt the action bar</span> for <span
+                class="focus">different screen sizes</span></p>
+        <img class="fragment roll-in" src="img/ab_wide_narrow.png"/>
+    </section>
+
+    <section>
+        <h2>Tips for creating <span class="focus">Action Bar</span></h2>
+    </section>
+
+    <section>
+        <h2>1. Avoid using the <span class="focus">always</span> value</h2>
+        <ul>
+            <li>Forcing too many action items into the action bar can create a cluttered UI
+            </li>
+            <li>Action items may overlap with other action bar elements such as the title or
+                navigation items
+            </li>
+            <li>Use <span class="focus">ifRoom</span> for the <span class="focus">android:showAsAction</span>
+                attribute
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. Provide an <span class="focus">Icon</span></h2>
+        <ul>
+            <li>Always provide an icon for the action items</li>
+            <li>Use <span class="focus">showAsAction="ifRoom|withText"</span></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. Provide a <span class="focus">Title</span></h2>
+        <ul>
+            <li>Always provide a title</li>
+            <li>Users view the title as a <span class="focus">tooltip</span> on long-click</li>
+            <li>It is critical for <span class="focus">accessibility</span>: Screen readers
+                read aloud the item title even when not visisble
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>4. Avoid using custom navigation modes when possible</h2>
+        <ul>
+            <li>Use the built-in tab and drop-down navigation modes when possible</li>
+            <li>System can adapt their presentation to different screen sizes automatically
+                <ul>
+                    <li>Ex: <span class="focus">stacked action bar</span> in handsets</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Split Action Bar</h2>
+        <ul>
+            <li>Available in Android 4.0 (API level 14) and higher</li>
+            <li>Add <span class="focus">uiOptions="splitActionBarWhenNarrow"</span> to your
+                <span class="focus">&lt;activity&gt;</span> or <span class="focus">&lt;application&gt;</span> manifest
+                element
+            </li>
+            <li>Call <span class="focus">setDisplayShowHomeEnabled(false)</span> to disable the
+                application icon in the
+                action bar
+            </li>
+        </ul>
+        <img src="img/split_ab.png"/>
+    </section>
 </section>
 
 <section>
     <section>
         <h1>Testing</h1>
     </section>
+
+    <section>
+        <h2>Use Emulator with different configs</h2>
+
+        <p><span class="focus">emulator -avd &lt;avd_name&gt; -scale 96dpi</span></p>
+        <img src="img/emulator.png"/>
+    </section>
+
+    <section>
+        <h2>Android Studio</h2>
+
+        <p>Built in device previews (landscape and portrait modes)</p>
+        <img src="img/android_studio.png"/>
+    </section>
+
 </section>
 
 <section>
