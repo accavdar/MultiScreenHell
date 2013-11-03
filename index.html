@@ -336,6 +336,37 @@
 
 <section>
     <h2>Tablet Layouts for Android 3.2</h2>
+
+    <p>Android 3.2 introduces a new way to specify resources for <span class="focus">more discrete screen sizes</span>
+    </p>
+</section>
+
+<section>
+    <h2>New Size Qualifiers</h2>
+    <ul>
+        <li class="fragment roll-in">
+            smallestWidth: <span class="focus">sw&lt;N&gt;dp</span>
+            <ul>
+                <li>Ex: <span class="focus">sw600dp</span></li>
+            </ul>
+        </li>
+        <li class="fragment roll-in">Available screen width: <span class="focus">w&lt;N&gt;dp</span>
+            <ul>
+                <li>Ex: <span class="focus">w1024dp</span></li>
+            </ul>
+        </li>
+        <li class="fragment roll-in">Available screen height: <span class="focus">h&lt;N&gt;dp</span>
+            <ul>
+                <li>Ex: <span class="focus">h720dp</span></li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Configuration Examples</h2>
+    <img src="img/sw.png"/>
+    <img src="img/aw.png"/>
 </section>
 
 <section>
@@ -343,7 +374,11 @@
 </section>
 
 <section>
-    <h2>1. Use wrap_content, fill_parent, or the dp unit for layout dimensions</h2>
+    <h2>1. Use <span class="focus">wrap_content</span>, <span class="focus">match_parent</span>, or the <span
+            class="focus">dp unit</span> for layout dimensions</h2>
+
+    <p>Using <span class="focus">wrap_content</span>, <span class="focus">match_parent</span> or <span class="focus">dp units</span>
+        guarantees that the view is given an appropriate size on the current device screen</p>
 </section>
 
 <section>
@@ -352,14 +387,27 @@
 
 <section>
     <h2>3. Use RelativeLayout</h2>
+
+    <p>It uses <span class="focus">relative positioning</span> to lay out its child views</p>
+
+    <p>For instance, you can specify that a button widget should appear <span class="focus">"to the right of"</span> a
+        text widget</p>
 </section>
 
 <section>
     <h2>4. Use size and density-specific resources</h2>
+    <img src="img/drawable_qualifiers.png"/>
+
+    <p>PS: To avoid pre-scaling, put the resource in a resource directory with the <span class="focus">nodpi</span>
+        configuration qualifier</p>
 </section>
 
 <section>
     <h2>5. Use Nine-patch Bitmaps</h2>
+
+    <p>They are specially formatted PNG files that indicate which areas <span
+            class="focus">can and cannot be stretched</span></p>
+    <img src="img/nine_patch.png"/>
 </section>
 
 </section>
@@ -420,8 +468,8 @@
         <h3><span class="focus">&lt;uses-feature&gt;</span> in manifest file</h3>
                 <pre>
                     <code class="xml" contenteditable="false" data-trim>
-&lt;uses-feature android:name="android.hardware.bluetooth" /&gt;
-&lt;uses-feature android:name="android.hardware.camera" /&gt;
+                        &lt;uses-feature android:name="android.hardware.bluetooth" /&gt;
+                        &lt;uses-feature android:name="android.hardware.camera" /&gt;
                     </code>
                 </pre>
 
@@ -443,12 +491,12 @@
         <h3>Check feature availabilities at runtime</h3>
                 <pre>
                     <code class="java" contenteditable="false" data-trim>
-PackageManager packageManager = this.getPackageManager();
-if (packageManager.hasSystemFeature(PackageManager.FEATURE_NFC)) {
-    Log.d(TAG, "Oh yeah, NFC is available. :)");
-} else {
-    Log.d(TAG, "Shit, no NFC. :(");
-}
+                        PackageManager packageManager = this.getPackageManager();
+                        if (packageManager.hasSystemFeature(PackageManager.FEATURE_NFC)) {
+                        Log.d(TAG, "Oh yeah, NFC is available. :)");
+                        } else {
+                        Log.d(TAG, "Shit, no NFC. :(");
+                        }
                     </code>
                 </pre>
     </section>
